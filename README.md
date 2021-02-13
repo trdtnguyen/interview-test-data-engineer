@@ -73,3 +73,15 @@ To get the bonus point, please include an encoded file of the generated data set
 ERD
 --
 ![alt text](erd.png "ERD")
+
+# Project Setup
+* Decode the `bonus_etl_data_gen.txt` file
+```
+base64 -d bonus_etl_data_gen.txt > bonus_etl_data_gen_decoded.txt
+```
+
+* Clone the [TPCH-sqlite](https://github.com/lovasoa/TPCH-sqlite) to get the idea how to genarate the data in this project
+
+```
+git clone https://github.com/lovasoa/TPCH-sqlite
+```
