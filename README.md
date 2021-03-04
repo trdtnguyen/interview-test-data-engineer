@@ -85,3 +85,21 @@ base64 -d bonus_etl_data_gen.txt > bonus_etl_data_gen_decoded.txt
 ```
 git clone https://github.com/lovasoa/TPCH-sqlite
 ```
+
+* Create database and populated database from data files
+The repository provied:
+   * SQL Data Definition Language (DDL) script file `ddl.sql` that create tables for our databases.
+   * `data.zip` file that has data for our tables
+
+We use `ddl.sql` to create tables and a script file (modified from [TPCH-sqlite](https://github.com/lovasoa/TPCH-sqlite)) to populated table.
+
+Unzip provided `data.zip` file into a directory to get `.tbl` files.
+
+```
+mkdir tpch-dbgen
+unzip data.zip -d tpch-dbgen
+```
+
+```
+./create_db.sh
+```
